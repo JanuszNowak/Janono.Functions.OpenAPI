@@ -1,0 +1,3 @@
+﻿--adding suppoert for example contracts
+--add .net core/standard 
+--add suport for x-ms decsrations for logic app
