@@ -39,17 +39,5 @@ namespace Janono.Functions.OpenAPI.Sample.FunctionAppV1
         }
 
 
-        //ignoreatriburesoricludeenv
-        const string SwaggerEnvFunctionName = "SwaggerEnv";
-
-        [FunctionName(SwaggerEnvFunctionName)]
-        [ResponseType(typeof(void))]
-        public static async Task<HttpResponseMessage> RunAsyncA(
-            [HttpTrigger(AuthorizationLevel.Anonymous,
-                System.Net.WebRequestMethods.Http.Get,System.Net.WebRequestMethods.Http.Post)] HttpRequestMessage req)
-        {
-            var assembly = Assembly.GetExecutingAssembly();
-            return await Janono.Functions.OpenAPI.Swagger.GetSwagger(req, assembly);
-        }
     }
 }

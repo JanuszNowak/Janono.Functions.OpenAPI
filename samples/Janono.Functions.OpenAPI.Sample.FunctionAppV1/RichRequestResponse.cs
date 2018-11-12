@@ -24,10 +24,11 @@ namespace Janono.Functions.OpenAPI.Sample.FunctionAppV1
         [HttpProduceResponse(HttpStatusCode.BadRequest, "Message is in invalid ")]
         [HttpProduceResponse(HttpStatusCode.InternalServerError, "InternalServerError")]
         [HttpProduceResponse(HttpStatusCode.Unauthorized, "Please authenticate with valid account.")]
-        //[HttpProduceResponse(HttpStatusCode.OK, "Succeeded.", typeof(RichResponse))]
+        [ResponseType(typeof(RichResponse))]
+        [HttpProduceResponse(HttpStatusCode.OK, "Succeeded.", typeof(RichResponse))]
         [Display(Name = FunctionName, Description = FunctionName)]
         [FunctionName(FunctionName)]
-        [ResponseType(typeof(RichResponse))]
+
         public static async Task<HttpResponseMessage> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous,
             WebRequestMethods.Http.Post,Route =null)]
@@ -42,6 +43,7 @@ namespace Janono.Functions.OpenAPI.Sample.FunctionAppV1
         }
     }
 
+    [Description("Rich Request")]
     public class RichRequest
     {
         [Required]

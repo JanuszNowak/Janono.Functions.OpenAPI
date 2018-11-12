@@ -73,6 +73,8 @@ namespace Janono.Functions.OpenAPI
                 assemblyDescription = assembly.GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false)
                     .OfType<AssemblyDescriptionAttribute>().FirstOrDefault().Description;
 
+                //if (assemblyDescription == null)
+                //    assemblyDescription = title;
             }
             catch (Exception ex)
             {
@@ -417,6 +419,7 @@ namespace Janono.Functions.OpenAPI
                             }
                             else
                             {
+                                responseDefList.schema = new ExpandoObject();
                                 AddToExpando(responseDefList.schema, "$ref", "#/definitions/" + name);
                                 AddParameterDefinition((IDictionary<string, object>)doc.definitions, responseType.ResponseType);
                             }
