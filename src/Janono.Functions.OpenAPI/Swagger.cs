@@ -67,7 +67,21 @@ namespace Janono.Functions.OpenAPI
 
             //doc.info.version = "1.0.0";
             doc.info.version = assembly.GetName().Version.ToString();
-            doc.info.description = assembly.GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false).OfType<AssemblyDescriptionAttribute>().FirstOrDefault().Description; ;
+            string assemblyDescription;
+            try
+            {
+                assemblyDescription = assembly.GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false)
+                    .OfType<AssemblyDescriptionAttribute>().FirstOrDefault().Description;
+
+                //if (assemblyDescription == null)
+                //    assemblyDescription = title;
+            }
+            catch (Exception ex)
+            {
+                assemblyDescription = title;
+            }
+
+            doc.info.description = assemblyDescription;
             doc.host = req.RequestUri.Authority;
             doc.basePath = "/";
             doc.schemes = new[] { "https" };
@@ -405,6 +419,7 @@ namespace Janono.Functions.OpenAPI
                             }
                             else
                             {
+                                responseDefList.schema = new ExpandoObject();
                                 AddToExpando(responseDefList.schema, "$ref", "#/definitions/" + name);
                                 AddParameterDefinition((IDictionary<string, object>)doc.definitions, responseType.ResponseType);
                             }

@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D1F77FAC-DF6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Janono.Functions.OpenAPI", "src\Janono.Functions.OpenAPI\Janono.Functions.OpenAPI.csproj", "{27120512-1E90-4459-A230-D7923EED80BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Janono.Functions.OpenAPI.Sample.FunctionAppV1", "samples\Janono.Functions.OpenAPI.Sample.FunctionAppV1\Janono.Functions.OpenAPI.Sample.FunctionAppV1.csproj", "{FE408950-9A1C-4E39-8D03-2AF74B7804EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{B65110F2-458F-474A-92DA-5F416B0815B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{27120512-1E90-4459-A230-D7923EED80BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27120512-1E90-4459-A230-D7923EED80BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27120512-1E90-4459-A230-D7923EED80BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE408950-9A1C-4E39-8D03-2AF74B7804EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE408950-9A1C-4E39-8D03-2AF74B7804EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE408950-9A1C-4E39-8D03-2AF74B7804EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE408950-9A1C-4E39-8D03-2AF74B7804EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{27120512-1E90-4459-A230-D7923EED80BA} = {D1F77FAC-DF66-4E91-8CB5-D848EC78D889}
+		{FE408950-9A1C-4E39-8D03-2AF74B7804EA} = {B65110F2-458F-474A-92DA-5F416B0815B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58F6696F-F338-4244-AB74-F594BF2E096A}
