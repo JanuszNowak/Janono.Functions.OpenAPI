@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Janono.Functions.OpenAPI</id>
+    <version>1.0.9</version>
+    <authors>Janono (Janusz Nowak)</authors>
+    <owners>Janono (Janusz Nowak)</owners>
+    <copyright>Janono (Janusz Nowak)</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://dev.azure.com/janono-pub/Janono.Functions.OpenAPI</projectUrl>    
+    <description>Swagger related code reusable in Azure Function Applications.</description>
+    <tags>azurefunctions</tags>
+    <dependencies>
+        <group targetFramework=".NETFramework4.6">
+            <dependency id="Microsoft.CSharp" version="4.4.1" />
+            <dependency id="Microsoft.NET.Sdk.Functions" version="1.0.9" />
+            <dependency id="System.ComponentModel.Annotations" version="4.4.1" />
+        </group>
+      <group targetFramework=".NETFramework4.6.1">
+          <dependency id="Microsoft.CSharp" version="4.4.1" />
+          <dependency id="Microsoft.NET.Sdk.Functions" version="1.0.9" />
+          <dependency id="System.ComponentModel.Annotations" version="4.4.1" />
+      </group>
+      <group targetFramework=".NETFramework4.6.2">
+          <dependency id="Microsoft.CSharp" version="4.4.1" />
+          <dependency id="Microsoft.NET.Sdk.Functions" version="1.0.9" />
+          <dependency id="System.ComponentModel.Annotations" version="4.4.1" />
+      </group>
+      <group targetFramework=".NETFramework4.7">
+          <dependency id="Microsoft.CSharp" version="4.4.1" />
+          <dependency id="Microsoft.NET.Sdk.Functions" version="1.0.9" />
+          <dependency id="System.ComponentModel.Annotations" version="4.4.1" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\net4.6\bin\Janono.Functions.OpenAPI.dll" target="lib\net46" />
+    <file src="bin\Release\net4.6\bin\Janono.Functions.OpenAPI.pdb" target="lib\net46" />
+    
+    <file src="bin\Release\net4.6.1\bin\Janono.Functions.OpenAPI.dll" target="lib\net461" />
+    <file src="bin\Release\net4.6.1\bin\Janono.Functions.OpenAPI.pdb" target="lib\net461" />
+    
+    <file src="bin\Release\net4.6.2\bin\Janono.Functions.OpenAPI.dll" target="lib\net462" />
+    <file src="bin\Release\net4.6.2\bin\Janono.Functions.OpenAPI.pdb" target="lib\net462" />
+    
+    <file src="bin\Release\net4.7\bin\Janono.Functions.OpenAPI.dll" target="lib\net47" />
+    <file src="bin\Release\net4.7\bin\Janono.Functions.OpenAPI.pdb" target="lib\net47" />
+  </files>
+</package>
